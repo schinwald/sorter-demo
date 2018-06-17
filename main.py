@@ -46,8 +46,8 @@ def createTable(salg):
     print(salg)
     print("   +-------------------------------------------------------------+\n")
 
-alg = ("Merge Sort", "Bubble Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort")
-falg = ("Merge Sort", "Bubble Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort", "Quick Sort")
+alg = ["Merge Sort"]
+falg = [sorter.merge]
 salg = algToString(alg)
 array = randomList(10)
 
@@ -69,7 +69,7 @@ time.sleep(1)
 print("   Which algorithm would you like to use?")
 
 sel = input("                        Algorithm number: ")
-while int(sel) not in range(1, len(alg)):
+while int(sel) not in range(1, len(alg)+1):
     os.system('cls')
     createTable(salg)
     print("   Randomly generated list: ", array, "\n")
@@ -78,6 +78,6 @@ while int(sel) not in range(1, len(alg)):
 
 os.system('cls')
 
-sort.merge.explain()
-print("\n   ", alg[int(sel)-1], ":")
-print("      ...description...")
+falg[int(sel)-1].explain()
+print("   Before: ", array)
+print("    After: ", falg[int(sel)-1].sort(array), "\n")
