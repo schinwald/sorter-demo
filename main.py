@@ -46,8 +46,8 @@ def createTable(salg):
     print(salg)
     print("   +-------------------------------------------------------------+\n")
 
-alg = ["Merge Sort", "Heap Sort"]
-falg = [sorter.merge, sorter.heap]
+alg = ["Merge Sort", "Heap Sort", "Insertion Sort"]
+falg = [sorter.merge, sorter.heap, sorter.insertion]
 salg = algToString(alg)
 array = randomList(10)
 
