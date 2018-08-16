@@ -4,6 +4,8 @@
 # 
 # Author: James Schinwald
 
+from utility import swap
+
 def sort(array):
     # build a max heap
     for i in range((int)(len(array) / 2) - 1, -1, -1):
@@ -35,11 +37,6 @@ def heapify(array, size, i):
     if highest != i:
         swap(array, highest, i)
         heapify(array, size, highest)
-
-def swap(array, a, b):
-    temp = array[a]
-    array[a] = array[b]
-    array[b] = temp
 
 def explain():
     print("\n   Heap Sort:\n")

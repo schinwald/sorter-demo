@@ -5,6 +5,8 @@
 # 
 # Author: James Schinwald
 
+from utility import swap
+
 def sort(array):
     partitioner(array, 0, len(array)-1)
 
@@ -27,11 +29,6 @@ def partition(array, low, high):
             j += 1
 
     return j-1
-        
-def swap(array, a, b):
-    temp = array[a]
-    array[a] = array[b]
-    array[b] = temp
 
 def explain():
     print("\n   Quick Sort:\n")

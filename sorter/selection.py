@@ -4,6 +4,8 @@
 # 
 # Author: James Schinwald
 
+from utility import swap
+
 # sorts the array
 def sort(array):
     # select an index
@@ -18,12 +20,6 @@ def sort(array):
 
         # swap smallest number with selected indexed number
         swap(array, i, lowest)
-
-# swaps to elements in an array
-def swap(array, a, b):
-    temp = array[a]
-    array[a] = array[b]
-    array[b] = temp
 
 # explanation of the sorting algorithm used
 def explain():
