@@ -46,10 +46,10 @@ def createTable(salg):
     print(salg)
     print("   +-------------------------------------------------------------+\n")
 
-alg = ["Quick Sort", "Merge Sort", "Heap Sort", "Insertion Sort", "Selection Sort", "Bubble Sort"]
-falg = [sorter.quick, sorter.merge, sorter.heap, sorter.insertion, sorter.selection, sorter.bubble]
+alg = ["Quick Sort", "Merge Sort", "Heap Sort", "Insertion Sort", "Selection Sort", "Bubble Sort", "Tim Sort"]
+falg = [sorter.quick, sorter.merge, sorter.heap, sorter.insertion, sorter.selection, sorter.bubble, sorter.tim]
 salg = algToString(alg)
-array = randomList(10)
+array = randomList(42)
 
 os.system('cls')
 
