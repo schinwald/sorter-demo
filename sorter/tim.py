@@ -1,4 +1,6 @@
 # Description:
+# Using techniques from merge sort and insertion sort, this algorithm splits the array into multiple sections, sorting each section and then finally merging each 
+# section in order.
 # 
 # Author: James Schinwald
 
@@ -8,6 +10,7 @@ RUN = 32
 
 # sorts the array
 def sort(array):
+    # Split if array is too large
     if len(array) > RUN:
         split = numpy.split(array, [RUN, len(array)])
 
@@ -45,6 +48,7 @@ def sort(array):
             for x in range(j, len(array_b)):
                 array[k+x-j] = array_b[x]
     else:
+        # select element in array
         for i in range(1, len(array)):
             num = array[i]
 
@@ -59,4 +63,10 @@ def sort(array):
 
 # explanation of the sorting algorithm used
 def explain():
-    pass
+    print("\n   Tim Sort:\n")
+    print("      Using techniques from merge sort and insertion sort, this algorithm splits the array into multiple sections, sorting each section and then finally merging each")
+    print("      section in order.\n")
+    print("         Steps:\n")
+    print("            1. Recursively split array into multiple sections.")
+    print("            2. Sort section using insertion sort.")
+    print("            3. Combine sorted sections using merge sort.\n")
