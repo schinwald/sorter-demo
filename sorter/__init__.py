@@ -6,3 +6,4 @@ from sorter import selection
 from sorter import bubble
 from sorter import tim
 from sorter import counting
+from sorter import radix
